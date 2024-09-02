@@ -638,5 +638,48 @@
 //     await queryInterface.dropTable('HR');
 //   },
 // };" solve alll file's code and give me perfect code for these tables which are created by model and also working perfectly and all Tables are created perfectly and ee badho code complete karine p6i mane samjavje sarkhi rite bcz mare sarkhi rite sikhvu 6 aa data base handling k jenathi proper database create kari sakish bija koi project ma etle.
-// ----------------------------
+// -------------Shape done by FreeCodeCamp---------------
 
+// const character = "#";
+// const count = 8;
+// const rows = [];
+// let inverted = true;
+
+// function padRow(rowNumber, rowCount) {
+//   return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+// }
+
+// // TODO: use a different type of loop shap as X
+// for (let i = 1; i <= count; i++) {  //  ###
+//   rows.unshift(padRow(i, count));   //   #
+//   rows.push(padRow(i, count));      //  ###
+// }
+
+// /*while (rows.length < count) {
+//   rows.push(padRow(rows.length + 1, count));
+// }*/
+
+// /*for (let i = count; i > 0; i--) {
+//   rows.push(padRow(i, count));
+// }*/
+
+// let result = ""
+
+// for (const row of rows) {
+//   result = result + "\n" + row;
+// }
+
+// console.log(result);
+
+// -_____-_____Average value______-______
+// function getAverage(scores) {
+//   let sum = 0;
+//   for(let i = 0; i < scores.length; i++){
+//     sum += scores[i];
+//   }
+//   const average = sum / scores.length;
+//   return average;
+// }
+
+// console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
+// console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
