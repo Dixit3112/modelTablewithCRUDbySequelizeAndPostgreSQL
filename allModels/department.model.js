@@ -49,11 +49,9 @@ async function getDepartmentEmployees(departmentId) {
         attributes: ['name', 'position'], // Fetch employee name and position
       }],
     });
-
     if (!department) {
       throw new Error('Department not found');
     }
-
     return department;
   } catch (error) {
     console.error('Error fetching department employees:', error.message);
@@ -63,3 +61,35 @@ async function getDepartmentEmployees(departmentId) {
 
 module.exports = { getEmployeeDetails, getDepartmentEmployees };
 module.exports = Department;
+
+// // Department File
+// const { DataTypes } = require('sequelize');
+// const sequelize = require('../config/database');
+// const moment = require('moment');
+// // const Employee = require('../allModels/employee.model');
+
+// const Department = sequelize.define('Department', {
+//   id: {
+//     type: DataTypes.INTEGER,
+//     autoIncrement: true,
+//     primaryKey: true,
+//   },
+//   name: {
+//     type: DataTypes.STRING,
+//     allowNull: false,
+//   }
+// }, {
+//   // tableName: 'Department',
+//   timestamps: true,
+//   getterMethods: {
+//     createdAt() {
+//       return moment(this.getDataValue('createdAt')).format('DD-MM-YYYY');
+//     },
+//     updatedAt() {
+//       return moment(this.getDataValue('updatedAt')).format('DD-MM-YYYY');
+//     }
+//   }
+// });
+
+
+// module.exports = Department;

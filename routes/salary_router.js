@@ -7,6 +7,7 @@ const Salary = require('../allModels/salary.model');
 router.post('/', async (req, res) => {
   try {
     const salary = await Salary.create(req.body);
+    console.log("Body: ", req.body)
     res.status(201).json(salary);
   } catch (error) {
     res.status(400).json({ error: error.message });

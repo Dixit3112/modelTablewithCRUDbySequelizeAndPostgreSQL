@@ -5,6 +5,11 @@ const moment = require('moment');
 const Employee = require('./employee.model');
 // const Department = require('./department.model');
 
+// id: {
+//   type: DataTypes.INTEGER,
+//   autoIncrement: true,
+//   primaryKey: true,
+// },
 const Salary = sequelize.define('Salary', {
   salary: {
     type: DataTypes.INTEGER,
@@ -16,7 +21,6 @@ const Salary = sequelize.define('Salary', {
       model: Employee,
       key: 'id',
     },
-    allowNull: false,
   },
 }, {
   timestamps: true,

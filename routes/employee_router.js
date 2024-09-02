@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
       },
       {
         model: Salary,
-        as: ['salary']
+        as: 'salary'
       }
     ]
     });
@@ -36,15 +36,15 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Read one employee by ID with department and salary
-router.get('/', async (req, res) => {
-  try {
-    const employee = await getEmployeeDetails(req.params.id);  // Call that function at here
-    res.status(200).json(employee);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+// // Read one employee by ID with department and salary
+// router.get('/', async (req, res) => {
+//   try {
+//     const employee = await getEmployeeDetails(req.params.id);  // Call that function at here
+//     res.status(200).json(employee);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// });
 
 // Update an employee
 router.put('/:id', async (req, res) => {
