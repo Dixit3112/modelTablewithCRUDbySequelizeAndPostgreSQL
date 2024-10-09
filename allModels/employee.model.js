@@ -38,3 +38,9 @@ const Employee = sequelize.define('Employee', {
 });
 
 module.exports = Employee;
+// {
+//   "name": "Kishan",
+//   "email": "kishan@gmail.com",
+//   "position": "Manager",
+//   "departmentId": 1
+// }

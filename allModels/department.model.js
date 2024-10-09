@@ -13,10 +13,10 @@ const Department = sequelize.define('Department', {
   timestamps: true,
   getterMethods: {
     createdAt() {
-      return moment(this.getDataValue('createdAt')).format('DD-MM-YYYY');
+      return moment(this.getDataValue('createdAt')).format('DD-MM-YYYY, h:mm:ss a');
     },
     updatedAt() {
-      return moment(this.getDataValue('updatedAt')).format('DD-MM-YYYY');
+      return moment(this.getDataValue('updatedAt')).format('DD-MM-YYYY, h:mm:ss a');
     }
   }
 });

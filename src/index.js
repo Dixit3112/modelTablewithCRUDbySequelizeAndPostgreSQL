@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // Sync Database
-sequelize.sync({ force: true })
+sequelize.sync({ force: false })
   .then(() => {
     console.log('Database synced perfectly.');
   })
